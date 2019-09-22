@@ -1,4 +1,5 @@
-﻿using CsvAnalysisAPI.Repositories;
+﻿using CsvAnalysisAPI.Models;
+using CsvAnalysisAPI.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,15 @@ namespace CsvAnalysisAPI.Controllers
         [Route("begin")]
         public HttpResponseMessage InitAnalysis()
         {
-            return Request.CreateResponse(HttpStatusCode.OK, repository.InitAnalysis());
+            return Request.CreateResponse(HttpStatusCode.OK, repository.BeginAnalysis());
+        }
+
+        [HttpGet]
+        [Route("column/{columnsId:int}")]
+        public CSVColumn GetColumn([FromUri]int columnsId)
+        {
+            PetaPoco.Database db = Providers.Util.GetDatabase();
+            return null;
         }
     }
 }

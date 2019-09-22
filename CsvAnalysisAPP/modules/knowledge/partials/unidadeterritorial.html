@@ -1,0 +1,10 @@
+﻿<div class="unit">
+    <div class="unidadeterritorial" ng-click="openDivisao()" ng-class="unit.Children > 0 ? 'hoverable' : ''">
+        <div class="title">{{unit.Unidade}}</div>
+    </div>
+    <div class="utchildren" ng-if="unit.showChildren">
+        <div class="child" ng-repeat="child in unit.utchildren">
+            <unidade-territorial unit="child"></unidade-territorial>
+        </div>
+    </div>
+</div>

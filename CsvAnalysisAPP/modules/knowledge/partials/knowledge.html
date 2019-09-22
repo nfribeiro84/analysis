@@ -1,0 +1,56 @@
+﻿<div class="module knowledge">
+    <div class="title">Hierarquias Territoriais - Knowledge Database</div>
+    <div class="hierarquias">
+        <div class="hierarquia" ng-repeat="hierarquia in _k.hierarquias" ng-click="_k.openHierarquia(hierarquia)">
+            <div class="title">{{hierarquia.Nome}}</div>
+            <div class="description">{{hierarquia.Descricao}}</div>
+        </div>
+    </div>
+
+    <div class="hierarquiaunidades" ng-if="_k.hierarquia">
+        <div class="title">{{_k.hierarquia.Nome}}</div>
+        <div class="description">{{_k.hierarquia.Descricao}}</div>
+        <div class="children">
+            <div class="child" ng-repeat="unit in _k.hierarquia.children" ng-include="'ut.html'"></div>
+        </div>
+    </div>
+
+    <div class="col-xs-12">
+        <div ui-tree id="tree-root">
+            <ol ui-tree-nodes ng-model="_k.nodes">
+                <li ng-repeat="node in _k.nodes" ui-tree-node ng-include="'nodes_renderer.html'"></li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<!-- Nested node template -->
+<script type="text/ng-template" id="nodes_renderer.html">
+    <div ui-tree-handle class="tree-node tree-node-content" ng-class="{'hasValue': node.hasValue}">
+        <a class="btn btn-success btn-xs" ng-if="node.nodes && node.nodes.length > 0" data-nodrag ng-click="toggle(this)">
+            <span class="glyphicon"
+                  ng-class="{
+          'glyphicon-chevron-right': collapsed,
+          'glyphicon-chevron-down': !collapsed
+        }"></span>
+        </a>
+        {{node.title}} <span ng-if="node.hasValue"> (TEM VALOR)</span>
+
+    </div>
+    <ol ui-tree-nodes="" ng-model="node.nodes" ng-class="{hidden: collapsed}">
+        <li ng-repeat="node in node.nodes" ui-tree-node ng-include="'nodes_renderer.html'">
+        </li>
+    </ol>
+</script>
+
+<script type="text/ng-template" id="ut.html">
+    <div class="unit">
+        <div class="unidadeterritorial" ng-click="_k.openDivisao(unit)" ng-class="unit.Children > 0 ? 'hoverable' : ''">
+            <div class="title">{{unit.Unidade}}</div>
+        </div>
+        <div class="utchildren" ng-if="unit.showChildren">
+            <div class="divisaotitle">{{unit.title}}</div>
+            <div class="child" ng-repeat="unit in unit.utchildren" ng-include="'ut.html'"></div>
+        </div>
+    </div>
+</script>

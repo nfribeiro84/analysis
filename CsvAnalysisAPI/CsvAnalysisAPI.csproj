@@ -43,6 +43,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="GenericParsing, Version=1.1.6.22888, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GenericParser.1.1.6\lib\net20\GenericParsing.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.4.1\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
     </Reference>
@@ -103,6 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="App_Data\files\BGRI2011_PT.csv" />
     <None Include="Scripts\jquery-1.6.4-vsdoc.js" />
     <Content Include="Scripts\jquery-1.6.4.js" />
     <Content Include="Scripts\jquery-1.6.4.min.js" />
@@ -113,13 +117,37 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AnalysisController.cs" />
+    <Compile Include="Controllers\KnowledgeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Categoria.cs" />
+    <Compile Include="Models\DistinctValue.cs" />
+    <Compile Include="Models\DivisaoTerritorial.cs" />
+    <Compile Include="Models\Knowledge\Hierarquia.cs" />
+    <Compile Include="Models\Knowledge\UnidadeDivisao.cs" />
+    <Compile Include="Models\Metadata.cs" />
+    <Compile Include="Models\RowDomain.cs" />
+    <Compile Include="Models\Tables\Classifier.cs" />
+    <Compile Include="Models\Tables\ColumnTree.cs" />
+    <Compile Include="Models\Tables\Country.cs" />
+    <Compile Include="Models\Tables\CSVColumn.cs" />
+    <Compile Include="Models\Tables\CSVFile.cs" />
+    <Compile Include="Models\Tables\CSVValue.cs" />
+    <Compile Include="Models\Tables\Domain.cs" />
+    <Compile Include="Models\Tables\DomainInformation.cs" />
+    <Compile Include="Models\Tables\DomainType.cs" />
+    <Compile Include="Models\Tables\Geoname.cs" />
+    <Compile Include="Models\Tables\Knowledge\Nomes.cs" />
+    <Compile Include="Models\Tables\Node.cs" />
+    <Compile Include="Models\Tables\Tree.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ClientConnection.cs" />
     <Compile Include="Providers\ClientConnectionProvider.cs" />
+    <Compile Include="Providers\PetaPoco.cs" />
+    <Compile Include="Providers\Util.cs" />
     <Compile Include="Repositories\AnalysisRepository.cs" />
+    <Compile Include="Repositories\KnowledgeRepository.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -131,10 +159,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

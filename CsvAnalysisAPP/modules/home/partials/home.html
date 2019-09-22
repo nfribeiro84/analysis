@@ -1,5 +1,222 @@
 ﻿<div class="module home">
     <div class="title">EXTRACÇÃO AUTOMÁTICA DE DADOS MULTIDIMENSIONAIS</div>
 
+    <div class="actions">
+        <button class="btn btn-primary" ng-click="_home.start()" ng-disabled="_home.running">Iniciar Análise</button>
+        <button class="btn btn-primary pull-right" ng-click="_home.knowledge()" ng-disabled="_home.running">knowledge Database</button>
+    </div>
 
+    <div class="results" ng-show="_home.running">
+        <div class="lastmessage">{{_home.message}}</div>
+        <div class="resume">
+            <div>Nº de colunas: tratadas {{_home.columns.length}} de {{_home.numberColumns}} </div>
+            <div>Nº de linhas: {{_home.numberRows}}</div>
+        </div>
+        <!--<div class="columns">
+            <div class="column" ng-repeat="column in _home.columns | orderBy:'ColumnIndex' track by column.ColumnIndex">
+
+                <div class="name">{{column.ColumnName + $index}}</div>
+                <div class="values">
+                    <div class=""><label>Índice da Coluna</label> {{column.ColumnIndex}}</div>
+                    <div class=""><label>Numero de nulls</label> {{column.NullsCount}}</div>
+                    <div class=""><label>Todos diferentes</label>{{column.AllDifferent}}</div>
+                    <div class="metric"><label>Tipo</label>{{column.MetricOrDimension}}</div>
+                    <div class="types">
+                        <label>Tipos</label>
+                        <span ng-repeat="(key,value) in column.DifferentTypes">{{key}} - {{value}}</span>
+                    </div>
+                    <div class="uniques">
+                        <label>Valores Diferentes </label>
+                        <div ng-repeat="(key, value) in column.UniqueValues">
+                            {{key}} - {{value}}
+                        </div>
+                    </div>
+                    </div>
+                </div>
+        </div>-->
+    </div>
+
+    <div class="alltypes" ng-show="_home.running">
+        <div class="type fileclassifier">
+            <div class="title">Classificadores do Ficheiro ({{_home.fileCols.length}})</div>
+            <div class="columns">
+                <div class="column" ng-repeat="column in _home.fileCols = _home.getColumns('file') | orderBy:'ColumnIndex' track by column.ColumnIndex">
+                    <div class="name">{{column.ColumnName}}</div>
+                    <div class="values">
+                        <div class=""><label>Índice da Coluna</label> {{column.ColumnIndex}}</div>
+                        <div class=""><label>Tipo</label><span ng-repeat="(key,value) in column.DifferentTypes">{{key}}</span></div>
+                        <div class=""><label>Valor</label><span ng-repeat="(key,value) in column.UniqueValues">{{key}}</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="type dimensions">
+            <div class="title">Dimensões ({{_home.dimensions.length}})</div>
+            <div class="columns">
+                <div class="column" ng-repeat="column in _home.dimensions = _home.getColumns('dimension') | orderBy:'ColumnIndex' track by column.ColumnIndex">
+                    <div class="name">{{column.ColumnName}}</div>
+                    <div class="values">
+                        <div class=""><label>Índice da Coluna</label> {{column.ColumnIndex}}</div>
+                        <div class=""><label>Numero de nulls</label> {{column.NullsCount}}</div>
+                        <div class=""><label>Todos diferentes</label>{{column.AllDifferent}}</div>
+                        <div class="types">
+                            <label>Tipos</label>
+                            <span ng-repeat="(key,value) in column.DifferentTypes">{{key}} - {{value}}</span>
+                        </div>
+                        <div class="geo" ng-class="{'exists': column.Geographic.Divisoes.length > 0}">
+                            <label>Divisões Territoriais</label> {{column.Geographic.Divisoes.length}}
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Divisao</th>
+                                        <th>Ocorrências</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="val in column.Geographic.Divisoes">
+                                        <td>{{val.Nome}}</td>
+                                        <td>{{val.Rows.length}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="geo" ng-class="{'exists': column.Geographic.Unidades.length > 0}">
+                            <label>Unidades Territoriais</label> {{column.Geographic.Unidades.length}}
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Divisao</th>
+                                        <th>Ocorrências</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="val in column.Geographic.Unidades">
+                                        <td>{{val.Nome}}</td>
+                                        <td>{{val.Rows.length}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="uniques">
+                            <label>Valores Distintos </label><span ng-if="column.CountUniqueValues">{{column.CountUniqueValues}}</span>
+                            <table class="table" ng-if="column.UniqueValues">
+                                <thead>
+                                    <tr>
+                                        <th>Valor</th>
+                                        <th>Ocorrências</th>
+                                        <th>Domínio</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="val in column.UniqueValues">
+                                        <td>{{val.Value}}</td>
+                                        <td>{{val.Count}}</td>
+                                        <td>
+                                            <div ng-if="val.Divisoes.length">
+                                                <div ng-repeat="divisao in val.Divisoes">{{divisao.Nome}}</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="type metrics">
+            <div class="title">Métricas ({{_home.metrics.length}})</div>
+            <div class="columns">
+                <div class="column" ng-repeat="column in _home.metrics = _home.getColumns('metric') | orderBy:'ColumnIndex' track by column.ColumnIndex">
+                    <div class="name">{{column.ColumnName}}</div>
+                    <div class="values">
+                        <div class=""><label>Índice da Coluna</label> {{column.ColumnIndex}}</div>
+                        <div class=""><label>Numero de nulls</label> {{column.NullsCount}}</div>
+                        <div class="types">
+                            <label>Tipos</label>
+                            <span ng-repeat="(key,value) in column.DifferentTypes">{{key}} - {{value}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="rowgeographics" ng-show="_home.rows">
+        <div class="title">Granularidades Geograficas por linha</div>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Linha</th>
+                    <th>Divisões Territoriais</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="row in _home.rows | limitTo:_home.rowsLimit">
+                    <td>{{$index}}</td>
+                    <td ng-class="{'more': row.length > 1}">
+                        <div class="divisao" ng-repeat="div in row">{{div.Nome}}</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <span style="cursor: pointer;" ng-click="_home.rowsLimit = _home.rowsLimit + 100">ver mais</span>
+    </div>-->
+
+    <div class="metricdimensions" style="width: 100%; margin-top: 30px; border: 1px solid black; padding: 15px;" ng-if="_home.nodes">
+        <div ui-tree id="tree-root">
+            <ol ui-tree-nodes ng-model="_home.nodes">
+                <li ng-repeat="node in _home.nodes" ui-tree-node ng-include="'nodes_renderer.html'"></li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="module test col-xs-12">
+        <div class="col-xs-9">
+            <div class="root category">
+                <div class="metrica" ng-repeat="metrica in _home.categoria.metricas">{{metrica}}</div>
+                <div class="category {{'c' + $index}}" ng-repeat="categoria in _home.categoria.categoriasfilhas" ng-include="'categoria.html'"></div>
+            </div>
+        </div>
+        <div class="col-xs-3 metricaslist">
+            <div class="metrica" ng-repeat="metrica in _home.metricas">{{$index + ' - ' + metrica}}</div>
+        </div>
+    </div>
+
+    <div class="metadata">
+        <pre>{{_home.metadata | json}}</pre>
+    </div>
+    
 </div>
+
+<!-- Nested node template -->
+<script type="text/ng-template" id="nodes_renderer.html">
+    <div ui-tree-handle class="tree-node tree-node-content" ng-class="{'hasValue': node.hasValue}">
+        <a class="btn btn-success btn-xs" ng-if="node.nodes && node.nodes.length > 0" data-nodrag ng-click="toggle(this)">
+            <span class="glyphicon"
+                  ng-class="{
+          'glyphicon-chevron-right': collapsed,
+          'glyphicon-chevron-down': !collapsed
+        }"></span>
+        </a>
+        {{node.title}}
+
+    </div>
+    <ol ui-tree-nodes="" ng-model="node.nodes" ng-class="{hidden: collapsed}">
+        <li ng-repeat="node in node.nodes" ui-tree-node ng-include="'nodes_renderer.html'">
+        </li>
+    </ol>
+</script>
+
+
+
+<script type="text/ng-template" id="categoria.html">
+    <div class="cattitle" ng-click="categoria.show = !categoria.show;">{{categoria.nome}}</div>
+    <div class="" ng-if="categoria.show">
+        <div class="metrica value" ng-if="categoria.CatValue">TOTAL</div>
+        <div class="metrica" ng-repeat="metrica in categoria.metricas">{{metrica}}</div>
+        <div class="category {{'c' + $index}}" ng-repeat="categoria in categoria.categoriasfilhas" ng-include="'categoria.html'"></div>
+    </div>
+</script>

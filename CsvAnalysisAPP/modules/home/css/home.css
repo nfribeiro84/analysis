@@ -1,5 +1,122 @@
-﻿.home > .title{
+﻿.module > .title{
     width: 100%;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 2em;
+    font-weight: 600;
 }
+.module .actions{
+    width: 100%;
+    margin-top:20px;
+}
+.home .results{
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+    display: table;
+}
+.home .results .lastmessage{
+    width: 80%;
+    margin: 0 auto;
+    border: 1px dotted #333;
+    text-align: center;
+    padding: 5px;
+}
+.home .results .resume{
+    margin: 20px 0;
+}
+.home .results .resume > div{
+    width: 50%;
+    float: left;
+    font-style: italic;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.home .alltypes {
+    width: 100%;
+    margin-bottom: 15px;
+    display: table;
+    margin-top: 30px;
+}
+
+    .home .alltypes .type {
+        width: 100%;
+        margin-bottom: 15px;
+        display: table;
+    }
+    .home .alltypes .type.fileclassifier{
+    }
+    .home .alltypes .type.dimensions {
+    }
+    .home .alltypes .type.metrics {
+    }
+    .home .alltypes .type .title{
+        width: 100%;
+        font-weight: 600;
+        font-size: 16px;
+        color: blue;
+        border-bottom: 1px solid blue;
+        padding-bottom: 5px;
+    }
+
+        .home .alltypes .type > .columns {
+            float: left;
+            display: flex;
+            overflow-x: auto;
+            min-height: 100px;
+            max-width: 1200px;
+            margin: auto 0;
+            padding: 10px;
+            min-width: 300px;
+        }
+
+        .home .alltypes .type .columns .column {
+            flex: 0 0 200px;
+            border-right: 1px solid #333;
+            border-left: 1px solid #333;
+            padding: 5px;
+            position: relative;
+            margin-bottom: 5px;
+            border: 1px solid #333;
+            border-radius: 10px;
+            margin-right: 10px;
+            background: white;
+        }
+        .home .alltypes .type .columns .column .waiting {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(200, 200, 200, 0.5);
+            color: #333;
+            text-align: center;
+            padding-top: 25px;
+        }
+
+        .home .alltypes .type .columns .column .name {
+            width: 100%;
+            font-weight: 600;
+            text-align: center;
+            border-bottom: 1px solid #333;
+            margin-bottom: 15px;
+        }
+        .home .alltypes .type .columns .column .values {
+            margin-bottom: 5px;
+        }
+            .home .alltypes .type .columns .column .values label {
+                font-style: italic;
+                margin-right: 5px;
+            }
+
+            .home .alltypes .type .columns .column .values .geo {
+                border: 1px solid #ddd;
+                padding: 3px;
+                margin-bottom: 5px;
+            }
+                .home .alltypes .type .columns .column .values .geo.exists {
+                    background-color: rgba(34, 181, 155, 0.3);
+                }
+
+        .home table.table td.more{ background-color: rgba(255, 0, 0, 0.30);}
