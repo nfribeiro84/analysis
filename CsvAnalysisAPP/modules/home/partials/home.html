@@ -144,7 +144,7 @@
         </div>
     </div>
 
-    <!--<div class="rowgeographics" ng-show="_home.rows">
+    <div class="rowgeographics" ng-show="_home.rows">
         <div class="title">Granularidades Geograficas por linha</div>
         <table class="table table-striped table-hover">
             <thead>
@@ -154,7 +154,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="row in _home.rows | limitTo:_home.rowsLimit">
+                <tr ng-repeat="row in _home.rows | limitTo:_home.rowsLimit track by $index">
                     <td>{{$index}}</td>
                     <td ng-class="{'more': row.length > 1}">
                         <div class="divisao" ng-repeat="div in row">{{div.Nome}}</div>
@@ -163,19 +163,19 @@
             </tbody>
         </table>
         <span style="cursor: pointer;" ng-click="_home.rowsLimit = _home.rowsLimit + 100">ver mais</span>
-    </div>-->
+    </div>
 
-    <div class="metricdimensions" style="width: 100%; margin-top: 30px; border: 1px solid black; padding: 15px;" ng-if="_home.nodes">
+    <!--<div class="metricdimensions" style="width: 100%; margin-top: 30px; border: 1px solid black; padding: 15px;" ng-if="_home.nodes">
         <div ui-tree id="tree-root">
             <ol ui-tree-nodes ng-model="_home.nodes">
                 <li ng-repeat="node in _home.nodes" ui-tree-node ng-include="'nodes_renderer.html'"></li>
             </ol>
         </div>
-    </div>
+    </div>-->
 
-    <div class="module test col-xs-12">
+    <!--<div class="test col-xs-12">
         <div class="col-xs-9">
-            <div class="root category">
+            <div class="root category" ng-if="_home.categoria">
                 <div class="metrica" ng-repeat="metrica in _home.categoria.metricas">{{metrica}}</div>
                 <div class="category {{'c' + $index}}" ng-repeat="categoria in _home.categoria.categoriasfilhas" ng-include="'categoria.html'"></div>
             </div>
@@ -183,12 +183,35 @@
         <div class="col-xs-3 metricaslist">
             <div class="metrica" ng-repeat="metrica in _home.metricas">{{$index + ' - ' + metrica}}</div>
         </div>
+    </div>-->
+    <!--<div class="col-xs-12">Categorias na metadata</div>-->
+    <div class="test col-xs-12">
+        <div class="col-xs-9">
+            <div class="root category" ng-if="_home.metadata">
+                <div class="catinfo" data-drop="true" jqyoui-droppable="{onDrop: '_home.dropMetrica(null)'}" data-jqyoui-options="{tolerance: 'pointer', hoverClass: 'hover', greedy: true}">
+                    <div class="category {{'c' + $index}}" ng-repeat="categoria in _home.getCategoriaMD(null) track by categoria.CategoriaId" ng-include="'categoriaMD.html'"></div>
+                    <div class="metrica" ng-repeat="metrica in _home.getMetricas(null) track by metrica.IndiceColuna" data-drag="true" jqyoui-draggable="{onStart: '_home.dragStart(metrica)', onStop: '_home.dragStop()'}" data-jqyoui-options="{revert: 'invalid'}">{{metrica.NomeColuna}}</div>
+                    <div class="add"><button class="btn btn-primary" ng-click="_home.newCategory(categoria)">Nova Categoria</button></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-3">
+            <pre ng-if="_home.metadata">{{_home.metadata.Metricas | json}}</pre>
+        </div>
+        <!--<div class="col-xs-3 metricaslist">
+            <div class="metrica" ng-repeat="metrica in _home.metricas">{{$index + ' - ' + metrica}}</div>
+        </div>-->
     </div>
 
+    <!--<div class="metadata">
+        <pre>{{_home.categoria | json}}</pre>
+    </div>-->
+
     <div class="metadata">
-        <pre>{{_home.metadata | json}}</pre>
+        <button ng-if="_home.metadata" class="btn btn-primary" ng-click="_home.copyClipboard()">Copiar MetaData</button>
+        <pre id="metadata">{{_home.metadata | json}}</pre>
     </div>
-    
+
 </div>
 
 <!-- Nested node template -->
@@ -210,13 +233,29 @@
     </ol>
 </script>
 
+<script type="text/ng-template" id="categoriaMD.html">
+    <!--<div class="innercat" ng-click="_home.openMDCategory($event, categoria)">-->
+    <div class="innercat">
+        <div class="cattitle"><span class="catname" ng-click="_home.changeCategoryName($event, categoria)">{{categoria.Nome}}</span></div>
+        <div class="remove" ng-show="categoria.show" ng-click="_home.removeCategoryMD($event, categoria)" tooltip="Remover categoria">&times;</div>
+        <div class="catinfo" ng-if="categoria.show"  data-drop="true" jqyoui-droppable="{onDrop: '_home.dropMetrica(categoria)'}" data-jqyoui-options="{tolerance: 'pointer', hoverClass: 'hover', greedy: true}">
+            <!--<div class="metrica value" ng-if="categoria.CatValue">TOTAL</div>-->
+            <div class="metrica" ng-repeat="metrica in _home.getMetricas(categoria.CategoriaId) track by metrica.IndiceColuna" data-drag="true" jqyoui-draggable="{onStart: '_home.dragStart(metrica)', onStop: '_home.dragStop()'}" data-jqyoui-options="{revert: 'invalid'}">{{metrica.NomeColuna}}</div>
+            <div class="category {{'c' + $index}}" ng-repeat="categoria in _home.getCategoriaMD(categoria.CategoriaId) track by categoria.CategoriaId" ng-include="'categoriaMD.html'"></div>
+            <div class="add"><button class="btn btn-primary" ng-click="_home.newCategory(categoria)">Nova Categoria</button></div>
+        </div>
+    </div>
+</script>
 
 
 <script type="text/ng-template" id="categoria.html">
-    <div class="cattitle" ng-click="categoria.show = !categoria.show;">{{categoria.nome}}</div>
-    <div class="" ng-if="categoria.show">
-        <div class="metrica value" ng-if="categoria.CatValue">TOTAL</div>
-        <div class="metrica" ng-repeat="metrica in categoria.metricas">{{metrica}}</div>
-        <div class="category {{'c' + $index}}" ng-repeat="categoria in categoria.categoriasfilhas" ng-include="'categoria.html'"></div>
+    <div class="innercat" ng-click="_home.openCategory($event, categoria)">
+        <div class="cattitle">{{categoria.nome}}</div>
+        <div class="remove" ng-show="categoria.show" ng-click="_home.removeCategory($event, categoria)">&times;</div>
+        <div class="catinfo" ng-if="categoria.show">
+            <div class="metrica value" ng-if="categoria.CatValue">TOTAL</div>
+            <div class="metrica" ng-repeat="metrica in categoria.metricas">{{metrica}}</div>
+            <div class="category {{'c' + $index}}" ng-repeat="categoria in categoria.categoriasfilhas" ng-include="'categoria.html'"></div>
+        </div>
     </div>
 </script>

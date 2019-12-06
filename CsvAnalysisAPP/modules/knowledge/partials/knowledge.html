@@ -46,7 +46,7 @@
 <script type="text/ng-template" id="ut.html">
     <div class="unit">
         <div class="unidadeterritorial" ng-click="_k.openDivisao(unit)" ng-class="unit.Children > 0 ? 'hoverable' : ''">
-            <div class="title">{{unit.Unidade}}</div>
+            <div class="title">{{unit.Unidade}} ({{unit.Alternativos}})</div>
         </div>
         <div class="utchildren" ng-if="unit.showChildren">
             <div class="divisaotitle">{{unit.title}}</div>

@@ -8,25 +8,27 @@
     border-bottom: 1px solid black;
 }
 
+.root.category{ width: 100%;}
+
 .category{
-    margin: 15px;
-    float: left;
     padding: 15px;
+    float: left;
     display: table;
+    position:relative;
 }
-    .category.c0{background-color: rgba(51, 102, 204, 0.5);  border: 1px solid black;}
-    .category.c1{background-color: rgba(220, 57, 18, 0.5);   border: 1px solid black;}
-    .category.c2{background-color: rgba(255, 153, 0, 0.5);   border: 1px solid black;}
-    .category.c3{background-color: rgba(16, 150, 24, 0.5);   border: 1px solid black;}
-    .category.c4{background-color: rgba(153, 0, 153, 0.5);   border: 1px solid black;}
-    .category.c5{background-color: rgba(59, 62, 172, 0.5);   border: 1px solid black;}
-    .category.c6{background-color: rgba(0, 153, 198, 0.5);   border: 1px solid black;}
-    .category.c7{background-color: rgba(221, 68, 119, 0.5);  border: 1px solid black;}
-    .category.c8{background-color: rgba(102, 170, 0, 0.5);   border: 1px solid black;}
-    .category.c9{background-color: rgba(184, 46, 46, 0.5);   border: 1px solid black;}
-    .category.c10{background-color: rgba(49, 99, 149, 0.5);  border: 1px solid black;}
-    .category.c11{background-color: rgba(153, 68, 153, 0.5); border: 1px solid black;}
-    .category.c12{background-color: rgba(34, 170, 153, 0.5); border: 1px solid black;}
+    .category.c0 > .innercat{background-color: rgba(51, 102, 204, 0.5);  border: 2px solid black;}
+    .category.c1 > .innercat{background-color: rgba(220, 57, 18, 0.5);   border: 2px solid black;}
+    .category.c2 > .innercat{background-color: rgba(255, 153, 0, 0.5);   border: 2px solid black;}
+    .category.c3 > .innercat{background-color: rgba(16, 150, 24, 0.5);   border: 2px solid black;}
+    .category.c4 > .innercat{background-color: rgba(153, 0, 153, 0.5);   border: 2px solid black;}
+    .category.c5 > .innercat{background-color: rgba(59, 62, 172, 0.5);   border: 2px solid black;}
+    .category.c6 > .innercat{background-color: rgba(0, 153, 198, 0.5);   border: 2px solid black;}
+    .category.c7 > .innercat{background-color: rgba(221, 68, 119, 0.5);  border: 2px solid black;}
+    .category.c8 > .innercat{background-color: rgba(102, 170, 0, 0.5);   border: 2px solid black;}
+    .category.c9 > .innercat{background-color: rgba(184, 46, 46, 0.5);   border: 2px solid black;}
+    .category.c10 > .innercat{background-color: rgba(49, 99, 149, 0.5);  border: 2px solid black;}
+    .category.c11 > .innercat{background-color: rgba(153, 68, 153, 0.5); border: 2px solid black;}
+    .category.c12 > .innercat{background-color: rgba(34, 170, 153, 0.5); border: 2px solid black;}
 
     /*.category.c0{background-color: rgba(51, 102, 204, 0.5); border: 1px solid #3366CC;}
     .category.c1{background-color: rgba(220, 57, 18, 0.5); border: 1px solid #DC3912;}
@@ -42,9 +44,32 @@
     .category.c11{background-color: rgba(153, 68, 153, 0.5); border: 1px solid #994499;}
     .category.c12{background-color: rgba(34, 170, 153, 0.5); border: 1px solid #22AA99;}*/
 
-    .category:hover{
-        border: 1px solid white;
+    
+
+    .category > .innercat{
+        display: table;
+        width: 100%;
+        cursor: pointer;
+        position: relative;
+        min-width: 100px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
     }
+        .category > .innercat:hover {
+            border: 2px dashed white;
+        }
+
+    .category .remove {
+        position: absolute;
+        right: 5px;
+        top: 0;
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+        .category .remove:hover {
+            color: #ddd;
+            cursor:pointer;
+        }
 
     .category .metrica{
         font-size: 0.8em;
@@ -61,6 +86,28 @@
         background-color: black;
     }
 
+    .category .cattitle {
+        font-size: 1.3em;
+        float: left;
+        width: 100%;
+        border-bottom: 1px solid black;
+        padding: 5px;
+    }
+
+    .category .catinfo{
+        float: left;
+        padding: 5px;
+        width: 100%;
+    }
+        .category .catinfo.hover{
+            background-color: red;
+        }
+
+    .category .catinfo .add{
+        width: 100%;
+        float: left;
+        margin-top: 15px;
+    }
 
 
 /*#AAAA11
@@ -72,11 +119,3 @@
 #3B3EAC*/
 /*.category.0{background-color: rgba(255, 106, 0, 0.3); border: 1px solid rgb(255,106,0);}*/
 /*.category.0{background-color: rgba(255, 106, 0, 0.3); border: 1px solid rgb(255,106,0);}*/
-.category .cattitle {
-    font-size: 1.3em;
-    margin-left: -10px;
-    margin-top: -10px;
-    margin-bottom: 15px;
-    float: left;
-    width: 100%;
-}

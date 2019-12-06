@@ -45,7 +45,7 @@ namespace CsvAnalysisAPI.Models
         /// </summary>
         public PetaPoco.Database kdb { get; set; }
 
-        private const decimal percentageMinimumGeoUnique = 0.05m;
+        private const decimal percentageMinimumGeoUnique = 0.5m;
         private const decimal percentageUniqueValuesSample = 0.1m;
 
         public CSVColumn() { }
@@ -96,8 +96,7 @@ namespace CsvAnalysisAPI.Models
 
             if(this.UniqueValues.Count == 1 && this.NullsCount == 0)
             {
-                this.ColClass = "file";
-                return;
+                this.ColClass = "file";                
             }
 
             if(!CheckPossibleGeographicDomain())
@@ -107,6 +106,7 @@ namespace CsvAnalysisAPI.Models
             }
 
             List<DivisaoTerritorial> divisoesAll = new List<DivisaoTerritorial>();
+            divisoesAll.Add(new DivisaoTerritorial { DivisoesTerritoriaisId = null, Nome = "Geo_Unknown", Rows = new List<int>() });
             int geoDomainsFound = 0;
             foreach(KeyValuePair<string, DistinctValue> val in this.UniqueValues)
             {
@@ -114,7 +114,10 @@ namespace CsvAnalysisAPI.Models
                     SetDivisoesTerritoriais(val);
 
                 if (val.Value.Divisoes.Count == 0)
+                {
+                    divisoesAll[0].Rows.AddRange(val.Value.Rows);
                     continue;
+                }
                 else
                     geoDomainsFound++;
 
@@ -137,11 +140,20 @@ namespace CsvAnalysisAPI.Models
                 }
             }
 
-            if (geoDomainsFound < Convert.ToInt32(Math.Round(this.UniqueValues.Count * percentageMinimumGeoUnique)))
+            if (geoDomainsFound == 0 || geoDomainsFound < Convert.ToInt32(Math.Round(this.UniqueValues.Count * percentageMinimumGeoUnique)))
                 return; // A quantidade de valores associada a domínios geográficos é inferior ao mínimo aceitável. A coluna não é considerada como Domínio Geográfico
 
             foreach(DivisaoTerritorial dt in divisoesAll)
             {
+                if (!dt.DivisoesTerritoriaisId.HasValue)
+                    continue;
+
+                if(dt.IsUnidadeDivisao)
+                {
+                    this.Geographic.Divisoes.Add(dt);
+                    continue;
+                }
+
                 if (dt.UnidadesTerritoriaisId.HasValue)
                 {
                     this.Geographic.Unidades.Add(dt);
@@ -241,12 +253,46 @@ namespace CsvAnalysisAPI.Models
             if(nome == null)
                 return divisoes;
 
+            DivisaoTerritorial unidade_divisao = GetUnidadeDivisoesWithName(nome);
+            if(unidade_divisao != null)
+            {
+                // se foi encontrada uma Unidade_Divisão não é necessário pesquisar o nome nas UT nem nas DT
+                // pois ambas estão inequivocamente identificadas na Unidade_Divisao
+                divisoes.Add(unidade_divisao);
+                return divisoes;
+            }
+            
             List<int> unidades = GetUnidadesFromNome(nome);
             if (unidades.Count > 0)
                 divisoes.AddRange(GetDivisoesFromUnidades(unidades));
 
             divisoes.AddRange(GetDivisoesFromNome(nome));
             return divisoes;
+        }
+
+        /// <summary>
+        /// método que retorna a divisao territorial que caracteriza a Unidade_Divisao identificada
+        /// pelo nome fornecido.
+        /// Se não for encontrada nenhuma Unidade_Divisao com o nome fornecido, retorna null
+        /// </summary>
+        /// <param name="nome"></param>
+        /// <returns></returns>
+        private DivisaoTerritorial GetUnidadeDivisoesWithName(Nomes nome)
+        {
+            PetaPoco.Sql query = PetaPoco.Sql.Builder;
+            query.Append(@" select 
+	                            ud.DivisoesTerritoriaisId,
+	                            n.Nome,
+	                            ud.UnidadesTerritoriaisId,
+	                            ud.UnidadesDivisoesId,
+                                1 'IsUnidadeDivisao'
+                            from
+	                            Unidades_Divisoes ud
+	                            inner join DivisoesTerritoriais dt on ud.DivisoesTerritoriaisId = dt.DivisoesTerritoriaisId
+	                            inner join Nomes n on dt.NomesId = n.NomesId
+                            where
+	                            ud.NomesId = @0", nome.NomesId);
+            return kdb.SingleOrDefault<DivisaoTerritorial>(query);
         }
 
         /// <summary>

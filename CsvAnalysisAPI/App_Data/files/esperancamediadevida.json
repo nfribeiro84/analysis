@@ -1,0 +1,397 @@
+{
+  "TimeOfAnalisys": 0,
+  "Nome": "esperancamediadevida.csv",
+  "NumLinhas": 11,
+  "NumColunas": 32,
+  "DataGeracao": "2019-11-21T15:26:27.5522346+00:00",
+  "GeoDivisoes": [
+    {
+      "DivisoesTerritoriaisId": 5,
+      "Tipo": "NUTS 0",
+      "Linhas": [
+        0
+      ]
+    },
+    {
+      "DivisoesTerritoriaisId": 6,
+      "Tipo": "NUTS 1",
+      "Linhas": [
+        1,
+        7,
+        9
+      ]
+    },
+    {
+      "DivisoesTerritoriaisId": 7,
+      "Tipo": "NUTS 2",
+      "Linhas": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10
+      ]
+    }
+  ],
+  "Dimensoes": [
+    {
+      "IndiceColuna": 0,
+      "NomeColuna": "Âmbito Geográfico",
+      "NumValoresUnicos": 3,
+      "NumValoresNulos": 0,
+      "TodosDiferentes": false,
+      "TipoValores": [
+        {
+          "Tipo": "text",
+          "Count": 11
+        }
+      ],
+      "ValoresUnicos": [
+        "NUTS 2013",
+        "NUTS I",
+        "NUTS II"
+      ],
+      "TipoDominioGeo": "Divisoes Territoriais"
+    },
+    {
+      "IndiceColuna": 1,
+      "NomeColuna": "Local",
+      "NumValoresUnicos": 9,
+      "NumValoresNulos": 0,
+      "TodosDiferentes": false,
+      "TipoValores": [
+        {
+          "Tipo": "text",
+          "Count": 11
+        }
+      ],
+      "ValoresUnicos": [
+        "Portugal",
+        "Continente",
+        "Norte",
+        "Centro",
+        "Área Metropolitana de Lisboa",
+        "Alentejo",
+        "Algarve",
+        "Região Autónoma dos Açores",
+        "Região Autónoma da Madeira"
+      ],
+      "TipoDominioGeo": "Unidades Territoriais"
+    }
+  ],
+  "Metricas": {
+    "Categorias": [
+      {
+        "CategoriaId": 1,
+        "Nome": "20",
+        "CategoriaPaiId": null,
+        "show": true
+      },
+      {
+        "CategoriaId": 2,
+        "Nome": "200",
+        "CategoriaPaiId": 1,
+        "show": true
+      },
+      {
+        "CategoriaId": 3,
+        "Nome": "2001",
+        "CategoriaPaiId": 2,
+        "show": true
+      },
+      {
+        "CategoriaId": 4,
+        "Nome": "2009",
+        "CategoriaPaiId": 2,
+        "show": true
+      },
+      {
+        "CategoriaId": 5,
+        "Nome": "201",
+        "CategoriaPaiId": 1,
+        "show": true
+      },
+      {
+        "CategoriaId": 6,
+        "Nome": "2010",
+        "CategoriaPaiId": 5,
+        "show": true
+      },
+      {
+        "CategoriaId": 7,
+        "Nome": "2011",
+        "CategoriaPaiId": 5,
+        "show": true
+      },
+      {
+        "CategoriaId": 8,
+        "Nome": "2012",
+        "CategoriaPaiId": 5,
+        "show": true
+      },
+      {
+        "CategoriaId": 9,
+        "Nome": "2013",
+        "CategoriaPaiId": 5,
+        "show": true
+      },
+      {
+        "CategoriaId": 10,
+        "Nome": "2014",
+        "CategoriaPaiId": 5,
+        "show": true
+      },
+      {
+        "CategoriaId": 11,
+        "Nome": "2015",
+        "CategoriaPaiId": 5,
+        "show": true
+      },
+      {
+        "CategoriaId": 12,
+        "Nome": "2016",
+        "CategoriaPaiId": 5,
+        "show": true
+      },
+      {
+        "CategoriaId": 13,
+        "Nome": "2017",
+        "CategoriaPaiId": 5,
+        "show": true
+      }
+    ],
+    "Colunas": [
+      {
+        "IndiceColuna": 12,
+        "NomeColuna": "20011",
+        "CategoriaId": 3,
+        "E_Total": false
+      },
+      {
+        "IndiceColuna": 22,
+        "NomeColuna": "20012",
+        "CategoriaId": 3,
+        "E_Total": false
+      },
+      {
+        "IndiceColuna": 2,
+        "NomeColuna": "2001",
+        "CategoriaId": 3,
+        "E_Total": true
+      },
+      {
+        "IndiceColuna": 13,
+        "NomeColuna": "20091",
+        "CategoriaId": 4,
+        "E_Total": false
+      },
+      {
+        "IndiceColuna": 23,
+        "NomeColuna": "20092",
+        "CategoriaId": 4,
+        "E_Total": false
+      },
+      {
+        "IndiceColuna": 3,
+        "NomeColuna": "2009",
+        "CategoriaId": 4,
+        "E_Total": true
+      },
+      {
+        "IndiceColuna": 14,
+        "NomeColuna": "20101",
+        "CategoriaId": 6,
+        "E_Total": false
+      },
+      {
+        "IndiceColuna": 24,
+        "NomeColuna": "20102",
+        "CategoriaId": 6,
+        "E_Total": false
+      },
+      {
+        "IndiceColuna": 4,
+        "NomeColuna": "2010",
+        "CategoriaId": 6,
+        "E_Total": true
+      },
+      {
+        "IndiceColuna": 15,
+        "NomeColuna": "20111",
+        "CategoriaId": 7,
+        "E_Total": false
+      },
+      {
+        "IndiceColuna": 25,
+        "NomeColuna": "20112",
+        "CategoriaId": 7,
+        "E_Total": false
+      },
+      {
+        "IndiceColuna": 5,
+        "NomeColuna": "2011",
+        "CategoriaId": 7,
+        "E_Total": true
+      },
+      {
+        "IndiceColuna": 16,
+        "NomeColuna": "20121",
+        "CategoriaId": 8,
+        "E_Total": false
+      },
+      {
+        "IndiceColuna": 26,
+        "NomeColuna": "20122",
+        "CategoriaId": 8,
+        "E_Total": false
+      },
+      {
+        "IndiceColuna": 6,
+        "NomeColuna": "2012",
+        "CategoriaId": 8,
+        "E_Total": true
+      },
+      {
+        "IndiceColuna": 17,
+        "NomeColuna": "20131",
+        "CategoriaId": 9,
+        "E_Total": false
+      },
+      {
+        "IndiceColuna": 27,
+        "NomeColuna": "20132",
+        "CategoriaId": 9,
+        "E_Total": false
+      },
+      {
+        "IndiceColuna": 7,
+        "NomeColuna": "2013",
+        "CategoriaId": 9,
+        "E_Total": true
+      },
+      {
+        "IndiceColuna": 18,
+        "NomeColuna": "20141",
+        "CategoriaId": 10,
+        "E_Total": false
+      },
+      {
+        "IndiceColuna": 28,
+        "NomeColuna": "20142",
+        "CategoriaId": 10,
+        "E_Total": false
+      },
+      {
+        "IndiceColuna": 8,
+        "NomeColuna": "2014",
+        "CategoriaId": 10,
+        "E_Total": true
+      },
+      {
+        "IndiceColuna": 19,
+        "NomeColuna": "20151",
+        "CategoriaId": 11,
+        "E_Total": false
+      },
+      {
+        "IndiceColuna": 29,
+        "NomeColuna": "20152",
+        "CategoriaId": 11,
+        "E_Total": false
+      },
+      {
+        "IndiceColuna": 9,
+        "NomeColuna": "2015",
+        "CategoriaId": 11,
+        "E_Total": true
+      },
+      {
+        "IndiceColuna": 20,
+        "NomeColuna": "20161",
+        "CategoriaId": 12,
+        "E_Total": false
+      },
+      {
+        "IndiceColuna": 30,
+        "NomeColuna": "20162",
+        "CategoriaId": 12,
+        "E_Total": false
+      },
+      {
+        "IndiceColuna": 10,
+        "NomeColuna": "2016",
+        "CategoriaId": 12,
+        "E_Total": true
+      },
+      {
+        "IndiceColuna": 21,
+        "NomeColuna": "20171",
+        "CategoriaId": 13,
+        "E_Total": false
+      },
+      {
+        "IndiceColuna": 31,
+        "NomeColuna": "20172",
+        "CategoriaId": 13,
+        "E_Total": false
+      },
+      {
+        "IndiceColuna": 11,
+        "NomeColuna": "2017",
+        "CategoriaId": 13,
+        "E_Total": true
+      }
+    ]
+  },
+  "resume": {
+    "dimensions": [
+      "Âmbito Geográfico",
+      "Local"
+    ],
+    "metrics": [
+      "20011",
+      "20012",
+      "2001",
+      "20091",
+      "20092",
+      "2009",
+      "20101",
+      "20102",
+      "2010",
+      "20111",
+      "20112",
+      "2011",
+      "20121",
+      "20122",
+      "2012",
+      "20131",
+      "20132",
+      "2013",
+      "20141",
+      "20142",
+      "2014",
+      "20151",
+      "20152",
+      "2015",
+      "20161",
+      "20162",
+      "2016",
+      "20171",
+      "20172",
+      "2017"
+    ],
+    "divisions": [
+      "NUTS 0",
+      "NUTS 1",
+      "NUTS 2"
+    ],
+    "geo": [
+      "Âmbito Geográfico",
+      "Local"
+    ],
+    "numDimensions": 2,
+    "numMetrics": 30
+  }
+}

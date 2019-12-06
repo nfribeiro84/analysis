@@ -1,0 +1,277 @@
+{
+  "TimeOfAnalisys": 0,
+  "Nome": "tec00001.csv",
+  "NumLinhas": 122,
+  "NumColunas": 15,
+  "DataGeracao": "2019-11-21T14:37:02.4213262+00:00",
+  "GeoDivisoes": [
+    {
+      "DivisoesTerritoriaisId": 5,
+      "Tipo": "NUTS 0",
+      "Linhas": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        11,
+        12,
+        13,
+        15,
+        16,
+        17,
+        18,
+        19,
+        21,
+        23,
+        24,
+        25,
+        28,
+        29,
+        31,
+        32,
+        33,
+        35,
+        36,
+        37,
+        39,
+        41,
+        43,
+        44,
+        46,
+        47,
+        48,
+        49,
+        52,
+        53,
+        54,
+        56,
+        57,
+        58,
+        59,
+        60,
+        62,
+        64,
+        65,
+        66,
+        69,
+        70,
+        72,
+        73,
+        74,
+        76,
+        77,
+        78,
+        80,
+        83,
+        85,
+        86,
+        88,
+        89,
+        90,
+        91,
+        94,
+        95,
+        96,
+        98,
+        99,
+        100,
+        101,
+        102,
+        104,
+        105,
+        106,
+        107,
+        110,
+        111,
+        113,
+        114,
+        115,
+        117,
+        118,
+        119,
+        121
+      ]
+    }
+  ],
+  "Dimensoes": [
+    {
+      "IndiceColuna": 0,
+      "NomeColuna": "na_item",
+      "NumValoresUnicos": 1,
+      "NumValoresNulos": 0,
+      "TodosDiferentes": false,
+      "TipoValores": [
+        {
+          "Tipo": "text",
+          "Count": 122
+        }
+      ],
+      "ValoresUnicos": [
+        "B1GQ"
+      ],
+      "TipoDominioGeo": null
+    },
+    {
+      "IndiceColuna": 1,
+      "NomeColuna": "unit",
+      "NumValoresUnicos": 3,
+      "NumValoresNulos": 0,
+      "TodosDiferentes": false,
+      "TipoValores": [
+        {
+          "Tipo": "text",
+          "Count": 122
+        }
+      ],
+      "ValoresUnicos": [
+        "CP_EUR_HAB",
+        "CP_MEUR",
+        "CP_MPPS"
+      ],
+      "TipoDominioGeo": null
+    },
+    {
+      "IndiceColuna": 2,
+      "NomeColuna": "geo\\time",
+      "NumValoresUnicos": 42,
+      "NumValoresNulos": 0,
+      "TodosDiferentes": false,
+      "TipoValores": [
+        {
+          "Tipo": "text",
+          "Count": 122
+        }
+      ],
+      "ValoresUnicos": [],
+      "TipoDominioGeo": "Divisoes Territoriais"
+    }
+  ],
+  "Metricas": {
+    "Categorias": [
+      {
+        "CategoriaId": 1,
+        "Nome": "20",
+        "CategoriaPaiId": null,
+        "show": true
+      },
+      {
+        "CategoriaId": 2,
+        "Nome": "200",
+        "CategoriaPaiId": 1,
+        "show": true
+      },
+      {
+        "CategoriaId": 3,
+        "Nome": "201",
+        "CategoriaPaiId": 1,
+        "show": true
+      }
+    ],
+    "Colunas": [
+      {
+        "IndiceColuna": 3,
+        "NomeColuna": "2007",
+        "CategoriaId": 2,
+        "E_Total": false
+      },
+      {
+        "IndiceColuna": 4,
+        "NomeColuna": "2008",
+        "CategoriaId": 2,
+        "E_Total": false
+      },
+      {
+        "IndiceColuna": 5,
+        "NomeColuna": "2009",
+        "CategoriaId": 2,
+        "E_Total": false
+      },
+      {
+        "IndiceColuna": 6,
+        "NomeColuna": "2010",
+        "CategoriaId": 3,
+        "E_Total": false
+      },
+      {
+        "IndiceColuna": 7,
+        "NomeColuna": "2011",
+        "CategoriaId": 3,
+        "E_Total": false
+      },
+      {
+        "IndiceColuna": 8,
+        "NomeColuna": "2012",
+        "CategoriaId": 3,
+        "E_Total": false
+      },
+      {
+        "IndiceColuna": 9,
+        "NomeColuna": "2013",
+        "CategoriaId": 3,
+        "E_Total": false
+      },
+      {
+        "IndiceColuna": 10,
+        "NomeColuna": "2014",
+        "CategoriaId": 3,
+        "E_Total": false
+      },
+      {
+        "IndiceColuna": 11,
+        "NomeColuna": "2015",
+        "CategoriaId": 3,
+        "E_Total": false
+      },
+      {
+        "IndiceColuna": 12,
+        "NomeColuna": "2016",
+        "CategoriaId": 3,
+        "E_Total": false
+      },
+      {
+        "IndiceColuna": 13,
+        "NomeColuna": "2017",
+        "CategoriaId": 3,
+        "E_Total": false
+      },
+      {
+        "IndiceColuna": 14,
+        "NomeColuna": "2018",
+        "CategoriaId": 3,
+        "E_Total": false
+      }
+    ]
+  },
+  "resume": {
+    "dimensions": [
+      "na_item",
+      "unit",
+      "geo\\time"
+    ],
+    "metrics": [
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016",
+      "2017",
+      "2018"
+    ],
+    "divisions": [
+      "NUTS 0"
+    ],
+    "geo": [
+      "geo\\time"
+    ],
+    "numDimensions": 3,
+    "numMetrics": 12
+  }
+}

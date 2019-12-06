@@ -1,0 +1,298 @@
+2017/geocod;2017/geodsg;2017/dim_3;2017/dim_3_t;2017/dim_4;2017/dim_4_t;2017/valor;2017/sinal_conv;2017/sinal_conv_desc
+PT17;Área Metropolitana de Lisboa;T;HM;T;Total;1410.52;;
+PT1;Continente;T;HM;T;Total;1133.34;;
+PT20;Região Autónoma dos Açores;T;HM;T;Total;;x;Dado não disponível
+PT2;Região Autónoma dos Açores;T;HM;T;Total;;x;Dado não disponível
+PT30;Região Autónoma da Madeira;T;HM;T;Total;;x;Dado não disponível
+PT3;Região Autónoma da Madeira;T;HM;T;Total;;x;Dado não disponível
+PT;Portugal;T;HM;T;Total;1133.34;;
+PT11;Norte;T;HM;T;Total;1015.58;;
+PT16;Centro;T;HM;T;Total;995.19;;
+PT18;Alentejo;T;HM;T;Total;1016.4;;
+PT15;Algarve;T;HM;T;Total;968.19;;
+PT17;Área Metropolitana de Lisboa;1;H;T;Total;1549.97;;
+PT1;Continente;1;H;T;Total;1236.85;;
+PT20;Região Autónoma dos Açores;1;H;T;Total;;x;Dado não disponível
+PT2;Região Autónoma dos Açores;1;H;T;Total;;x;Dado não disponível
+PT30;Região Autónoma da Madeira;1;H;T;Total;;x;Dado não disponível
+PT3;Região Autónoma da Madeira;1;H;T;Total;;x;Dado não disponível
+PT;Portugal;1;H;T;Total;1236.85;;
+PT11;Norte;1;H;T;Total;1101.21;;
+PT16;Centro;1;H;T;Total;1095.99;;
+PT18;Alentejo;1;H;T;Total;1113.93;;
+PT15;Algarve;1;H;T;Total;1029.83;;
+PT17;Área Metropolitana de Lisboa;2;M;T;Total;1250.58;;
+PT1;Continente;2;M;T;Total;1011.02;;
+PT20;Região Autónoma dos Açores;2;M;T;Total;;x;Dado não disponível
+PT2;Região Autónoma dos Açores;2;M;T;Total;;x;Dado não disponível
+PT30;Região Autónoma da Madeira;2;M;T;Total;;x;Dado não disponível
+PT3;Região Autónoma da Madeira;2;M;T;Total;;x;Dado não disponível
+PT;Portugal;2;M;T;Total;1011.02;;
+PT11;Norte;2;M;T;Total;911.94;;
+PT16;Centro;2;M;T;Total;873.46;;
+PT18;Alentejo;2;M;T;Total;897.11;;
+PT15;Algarve;2;M;T;Total;903.42;;
+PT17;Área Metropolitana de Lisboa;T;HM;7;65 e mais anos;1625.86;;
+PT1;Continente;T;HM;7;65 e mais anos;1346.83;;
+PT20;Região Autónoma dos Açores;T;HM;7;65 e mais anos;;x;Dado não disponível
+PT2;Região Autónoma dos Açores;T;HM;7;65 e mais anos;;x;Dado não disponível
+PT30;Região Autónoma da Madeira;T;HM;7;65 e mais anos;;x;Dado não disponível
+PT3;Região Autónoma da Madeira;T;HM;7;65 e mais anos;;x;Dado não disponível
+PT;Portugal;T;HM;7;65 e mais anos;1346.83;;
+PT11;Norte;T;HM;7;65 e mais anos;1342.9;;
+PT16;Centro;T;HM;7;65 e mais anos;1103.31;;
+PT18;Alentejo;T;HM;7;65 e mais anos;1098.04;;
+PT15;Algarve;T;HM;7;65 e mais anos;955.79;;
+PT17;Área Metropolitana de Lisboa;1;H;7;65 e mais anos;1915.21;;
+PT1;Continente;1;H;7;65 e mais anos;1547.82;;
+PT20;Região Autónoma dos Açores;1;H;7;65 e mais anos;;x;Dado não disponível
+PT2;Região Autónoma dos Açores;1;H;7;65 e mais anos;;x;Dado não disponível
+PT30;Região Autónoma da Madeira;1;H;7;65 e mais anos;;x;Dado não disponível
+PT3;Região Autónoma da Madeira;1;H;7;65 e mais anos;;x;Dado não disponível
+PT;Portugal;1;H;7;65 e mais anos;1547.82;;
+PT11;Norte;1;H;7;65 e mais anos;1488.79;;
+PT16;Centro;1;H;7;65 e mais anos;1258.51;;
+PT18;Alentejo;1;H;7;65 e mais anos;1235.34;;
+PT15;Algarve;1;H;7;65 e mais anos;1057.34;;
+PT17;Área Metropolitana de Lisboa;2;M;7;65 e mais anos;1158.44;;
+PT1;Continente;2;M;7;65 e mais anos;1018.23;;
+PT20;Região Autónoma dos Açores;2;M;7;65 e mais anos;;x;Dado não disponível
+PT2;Região Autónoma dos Açores;2;M;7;65 e mais anos;;x;Dado não disponível
+PT30;Região Autónoma da Madeira;2;M;7;65 e mais anos;;x;Dado não disponível
+PT3;Região Autónoma da Madeira;2;M;7;65 e mais anos;;x;Dado não disponível
+PT;Portugal;2;M;7;65 e mais anos;1018.23;;
+PT11;Norte;2;M;7;65 e mais anos;1054.48;;
+PT16;Centro;2;M;7;65 e mais anos;876.27;;
+PT18;Alentejo;2;M;7;65 e mais anos;870.43;;
+PT15;Algarve;2;M;7;65 e mais anos;836.24;;
+PT17;Área Metropolitana de Lisboa;T;HM;3;25 - 34 anos;1138.05;;
+PT1;Continente;T;HM;3;25 - 34 anos;989.16;;
+PT20;Região Autónoma dos Açores;T;HM;3;25 - 34 anos;;x;Dado não disponível
+PT2;Região Autónoma dos Açores;T;HM;3;25 - 34 anos;;x;Dado não disponível
+PT30;Região Autónoma da Madeira;T;HM;3;25 - 34 anos;;x;Dado não disponível
+PT3;Região Autónoma da Madeira;T;HM;3;25 - 34 anos;;x;Dado não disponível
+PT;Portugal;T;HM;3;25 - 34 anos;989.16;;
+PT11;Norte;T;HM;3;25 - 34 anos;926.59;;
+PT16;Centro;T;HM;3;25 - 34 anos;897.17;;
+PT18;Alentejo;T;HM;3;25 - 34 anos;923.43;;
+PT15;Algarve;T;HM;3;25 - 34 anos;895.95;;
+PT17;Área Metropolitana de Lisboa;1;H;3;25 - 34 anos;1201.2;;
+PT1;Continente;1;H;3;25 - 34 anos;1040.41;;
+PT20;Região Autónoma dos Açores;1;H;3;25 - 34 anos;;x;Dado não disponível
+PT2;Região Autónoma dos Açores;1;H;3;25 - 34 anos;;x;Dado não disponível
+PT30;Região Autónoma da Madeira;1;H;3;25 - 34 anos;;x;Dado não disponível
+PT3;Região Autónoma da Madeira;1;H;3;25 - 34 anos;;x;Dado não disponível
+PT;Portugal;1;H;3;25 - 34 anos;1040.41;;
+PT11;Norte;1;H;3;25 - 34 anos;977.9;;
+PT16;Centro;1;H;3;25 - 34 anos;946.46;;
+PT18;Alentejo;1;H;3;25 - 34 anos;968.91;;
+PT15;Algarve;1;H;3;25 - 34 anos;909.12;;
+PT17;Área Metropolitana de Lisboa;2;M;3;25 - 34 anos;1069.08;;
+PT1;Continente;2;M;3;25 - 34 anos;931.11;;
+PT20;Região Autónoma dos Açores;2;M;3;25 - 34 anos;;x;Dado não disponível
+PT2;Região Autónoma dos Açores;2;M;3;25 - 34 anos;;x;Dado não disponível
+PT30;Região Autónoma da Madeira;2;M;3;25 - 34 anos;;x;Dado não disponível
+PT3;Região Autónoma da Madeira;2;M;3;25 - 34 anos;;x;Dado não disponível
+PT;Portugal;2;M;3;25 - 34 anos;931.11;;
+PT11;Norte;2;M;3;25 - 34 anos;868.39;;
+PT16;Centro;2;M;3;25 - 34 anos;838.21;;
+PT18;Alentejo;2;M;3;25 - 34 anos;867.67;;
+PT15;Algarve;2;M;3;25 - 34 anos;882.02;;
+PT17;Área Metropolitana de Lisboa;T;HM;4;35 - 44 anos;1469.05;;
+PT1;Continente;T;HM;4;35 - 44 anos;1191.73;;
+PT20;Região Autónoma dos Açores;T;HM;4;35 - 44 anos;;x;Dado não disponível
+PT2;Região Autónoma dos Açores;T;HM;4;35 - 44 anos;;x;Dado não disponível
+PT30;Região Autónoma da Madeira;T;HM;4;35 - 44 anos;;x;Dado não disponível
+PT3;Região Autónoma da Madeira;T;HM;4;35 - 44 anos;;x;Dado não disponível
+PT;Portugal;T;HM;4;35 - 44 anos;1191.73;;
+PT11;Norte;T;HM;4;35 - 44 anos;1069.14;;
+PT16;Centro;T;HM;4;35 - 44 anos;1042.71;;
+PT18;Alentejo;T;HM;4;35 - 44 anos;1054.29;;
+PT15;Algarve;T;HM;4;35 - 44 anos;1019.48;;
+PT17;Área Metropolitana de Lisboa;1;H;4;35 - 44 anos;1576.83;;
+PT1;Continente;1;H;4;35 - 44 anos;1285.23;;
+PT20;Região Autónoma dos Açores;1;H;4;35 - 44 anos;;x;Dado não disponível
+PT2;Região Autónoma dos Açores;1;H;4;35 - 44 anos;;x;Dado não disponível
+PT30;Região Autónoma da Madeira;1;H;4;35 - 44 anos;;x;Dado não disponível
+PT3;Região Autónoma da Madeira;1;H;4;35 - 44 anos;;x;Dado não disponível
+PT;Portugal;1;H;4;35 - 44 anos;1285.23;;
+PT11;Norte;1;H;4;35 - 44 anos;1152.09;;
+PT16;Centro;1;H;4;35 - 44 anos;1140.5;;
+PT18;Alentejo;1;H;4;35 - 44 anos;1140.12;;
+PT15;Algarve;1;H;4;35 - 44 anos;1076.77;;
+PT17;Área Metropolitana de Lisboa;2;M;4;35 - 44 anos;1348.8;;
+PT1;Continente;2;M;4;35 - 44 anos;1087.82;;
+PT20;Região Autónoma dos Açores;2;M;4;35 - 44 anos;;x;Dado não disponível
+PT2;Região Autónoma dos Açores;2;M;4;35 - 44 anos;;x;Dado não disponível
+PT30;Região Autónoma da Madeira;2;M;4;35 - 44 anos;;x;Dado não disponível
+PT3;Região Autónoma da Madeira;2;M;4;35 - 44 anos;;x;Dado não disponível
+PT;Portugal;2;M;4;35 - 44 anos;1087.82;;
+PT11;Norte;2;M;4;35 - 44 anos;977.83;;
+PT16;Centro;2;M;4;35 - 44 anos;932.38;;
+PT18;Alentejo;2;M;4;35 - 44 anos;954.44;;
+PT15;Algarve;2;M;4;35 - 44 anos;960.7;;
+PT17;Área Metropolitana de Lisboa;T;HM;2;18 - 24 anos;867.29;;
+PT1;Continente;T;HM;2;18 - 24 anos;788.29;;
+PT20;Região Autónoma dos Açores;T;HM;2;18 - 24 anos;;x;Dado não disponível
+PT2;Região Autónoma dos Açores;T;HM;2;18 - 24 anos;;x;Dado não disponível
+PT30;Região Autónoma da Madeira;T;HM;2;18 - 24 anos;;x;Dado não disponível
+PT3;Região Autónoma da Madeira;T;HM;2;18 - 24 anos;;x;Dado não disponível
+PT;Portugal;T;HM;2;18 - 24 anos;788.29;;
+PT11;Norte;T;HM;2;18 - 24 anos;761.53;;
+PT16;Centro;T;HM;2;18 - 24 anos;745.77;;
+PT18;Alentejo;T;HM;2;18 - 24 anos;769.56;;
+PT15;Algarve;T;HM;2;18 - 24 anos;773.88;;
+PT17;Área Metropolitana de Lisboa;1;H;2;18 - 24 anos;904.99;;
+PT1;Continente;1;H;2;18 - 24 anos;818.25;;
+PT20;Região Autónoma dos Açores;1;H;2;18 - 24 anos;;x;Dado não disponível
+PT2;Região Autónoma dos Açores;1;H;2;18 - 24 anos;;x;Dado não disponível
+PT30;Região Autónoma da Madeira;1;H;2;18 - 24 anos;;x;Dado não disponível
+PT3;Região Autónoma da Madeira;1;H;2;18 - 24 anos;;x;Dado não disponível
+PT;Portugal;1;H;2;18 - 24 anos;818.25;;
+PT11;Norte;1;H;2;18 - 24 anos;799.21;;
+PT16;Centro;1;H;2;18 - 24 anos;769.61;;
+PT18;Alentejo;1;H;2;18 - 24 anos;789.45;;
+PT15;Algarve;1;H;2;18 - 24 anos;784.12;;
+PT17;Área Metropolitana de Lisboa;2;M;2;18 - 24 anos;825.81;;
+PT1;Continente;2;M;2;18 - 24 anos;749.37;;
+PT20;Região Autónoma dos Açores;2;M;2;18 - 24 anos;;x;Dado não disponível
+PT2;Região Autónoma dos Açores;2;M;2;18 - 24 anos;;x;Dado não disponível
+PT30;Região Autónoma da Madeira;2;M;2;18 - 24 anos;;x;Dado não disponível
+PT3;Região Autónoma da Madeira;2;M;2;18 - 24 anos;;x;Dado não disponível
+PT;Portugal;2;M;2;18 - 24 anos;749.37;;
+PT11;Norte;2;M;2;18 - 24 anos;709.38;;
+PT16;Centro;2;M;2;18 - 24 anos;711.21;;
+PT18;Alentejo;2;M;2;18 - 24 anos;740.74;;
+PT15;Algarve;2;M;2;18 - 24 anos;762.11;;
+PT17;Área Metropolitana de Lisboa;T;HM;5;45 - 54 anos;1635.96;;
+PT1;Continente;T;HM;5;45 - 54 anos;1229.81;;
+PT20;Região Autónoma dos Açores;T;HM;5;45 - 54 anos;;x;Dado não disponível
+PT2;Região Autónoma dos Açores;T;HM;5;45 - 54 anos;;x;Dado não disponível
+PT30;Região Autónoma da Madeira;T;HM;5;45 - 54 anos;;x;Dado não disponível
+PT3;Região Autónoma da Madeira;T;HM;5;45 - 54 anos;;x;Dado não disponível
+PT;Portugal;T;HM;5;45 - 54 anos;1229.81;;
+PT11;Norte;T;HM;5;45 - 54 anos;1058.85;;
+PT16;Centro;T;HM;5;45 - 54 anos;1049.89;;
+PT18;Alentejo;T;HM;5;45 - 54 anos;1060.38;;
+PT15;Algarve;T;HM;5;45 - 54 anos;1028.43;;
+PT17;Área Metropolitana de Lisboa;1;H;5;45 - 54 anos;1836.98;;
+PT1;Continente;1;H;5;45 - 54 anos;1376.37;;
+PT20;Região Autónoma dos Açores;1;H;5;45 - 54 anos;;x;Dado não disponível
+PT2;Região Autónoma dos Açores;1;H;5;45 - 54 anos;;x;Dado não disponível
+PT30;Região Autónoma da Madeira;1;H;5;45 - 54 anos;;x;Dado não disponível
+PT3;Região Autónoma da Madeira;1;H;5;45 - 54 anos;;x;Dado não disponível
+PT;Portugal;1;H;5;45 - 54 anos;1376.37;;
+PT11;Norte;1;H;5;45 - 54 anos;1171.79;;
+PT16;Centro;1;H;5;45 - 54 anos;1191.1;;
+PT18;Alentejo;1;H;5;45 - 54 anos;1197.91;;
+PT15;Algarve;1;H;5;45 - 54 anos;1136.29;;
+PT17;Área Metropolitana de Lisboa;2;M;5;45 - 54 anos;1399.05;;
+PT1;Continente;2;M;5;45 - 54 anos;1056.3;;
+PT20;Região Autónoma dos Açores;2;M;5;45 - 54 anos;;x;Dado não disponível
+PT2;Região Autónoma dos Açores;2;M;5;45 - 54 anos;;x;Dado não disponível
+PT30;Região Autónoma da Madeira;2;M;5;45 - 54 anos;;x;Dado não disponível
+PT3;Região Autónoma da Madeira;2;M;5;45 - 54 anos;;x;Dado não disponível
+PT;Portugal;2;M;5;45 - 54 anos;1056.3;;
+PT11;Norte;2;M;5;45 - 54 anos;921.75;;
+PT16;Centro;2;M;5;45 - 54 anos;883.41;;
+PT18;Alentejo;2;M;5;45 - 54 anos;897.39;;
+PT15;Algarve;2;M;5;45 - 54 anos;919.14;;
+PT17;Área Metropolitana de Lisboa;T;HM;6;55 - 64 anos;1621.74;;
+PT1;Continente;T;HM;6;55 - 64 anos;1237.24;;
+PT20;Região Autónoma dos Açores;T;HM;6;55 - 64 anos;;x;Dado não disponível
+PT2;Região Autónoma dos Açores;T;HM;6;55 - 64 anos;;x;Dado não disponível
+PT30;Região Autónoma da Madeira;T;HM;6;55 - 64 anos;;x;Dado não disponível
+PT3;Região Autónoma da Madeira;T;HM;6;55 - 64 anos;;x;Dado não disponível
+PT;Portugal;T;HM;6;55 - 64 anos;1237.24;;
+PT11;Norte;T;HM;6;55 - 64 anos;1099.66;;
+PT16;Centro;T;HM;6;55 - 64 anos;1054.06;;
+PT18;Alentejo;T;HM;6;55 - 64 anos;1090.68;;
+PT15;Algarve;T;HM;6;55 - 64 anos;1006.54;;
+PT17;Área Metropolitana de Lisboa;1;H;6;55 - 64 anos;1871.45;;
+PT1;Continente;1;H;6;55 - 64 anos;1401.29;;
+PT20;Região Autónoma dos Açores;1;H;6;55 - 64 anos;;x;Dado não disponível
+PT2;Região Autónoma dos Açores;1;H;6;55 - 64 anos;;x;Dado não disponível
+PT30;Região Autónoma da Madeira;1;H;6;55 - 64 anos;;x;Dado não disponível
+PT3;Região Autónoma da Madeira;1;H;6;55 - 64 anos;;x;Dado não disponível
+PT;Portugal;1;H;6;55 - 64 anos;1401.29;;
+PT11;Norte;1;H;6;55 - 64 anos;1218.13;;
+PT16;Centro;1;H;6;55 - 64 anos;1211.97;;
+PT18;Alentejo;1;H;6;55 - 64 anos;1260.73;;
+PT15;Algarve;1;H;6;55 - 64 anos;1124.25;;
+PT17;Área Metropolitana de Lisboa;2;M;6;55 - 64 anos;1301.33;;
+PT1;Continente;2;M;6;55 - 64 anos;1011.01;;
+PT20;Região Autónoma dos Açores;2;M;6;55 - 64 anos;;x;Dado não disponível
+PT2;Região Autónoma dos Açores;2;M;6;55 - 64 anos;;x;Dado não disponível
+PT30;Região Autónoma da Madeira;2;M;6;55 - 64 anos;;x;Dado não disponível
+PT3;Região Autónoma da Madeira;2;M;6;55 - 64 anos;;x;Dado não disponível
+PT;Portugal;2;M;6;55 - 64 anos;1011.01;;
+PT11;Norte;2;M;6;55 - 64 anos;915.72;;
+PT16;Centro;2;M;6;55 - 64 anos;840;;
+PT18;Alentejo;2;M;6;55 - 64 anos;869.24;;
+PT15;Algarve;2;M;6;55 - 64 anos;878.74;;
+PT17;Área Metropolitana de Lisboa;T;HM;0;Desconhecido;1665.39;;
+PT1;Continente;T;HM;0;Desconhecido;1616.05;;
+PT20;Região Autónoma dos Açores;T;HM;0;Desconhecido;;x;Dado não disponível
+PT2;Região Autónoma dos Açores;T;HM;0;Desconhecido;;x;Dado não disponível
+PT30;Região Autónoma da Madeira;T;HM;0;Desconhecido;;x;Dado não disponível
+PT3;Região Autónoma da Madeira;T;HM;0;Desconhecido;;x;Dado não disponível
+PT;Portugal;T;HM;0;Desconhecido;1616.05;;
+PT11;Norte;T;HM;0;Desconhecido;1838.52;;
+PT16;Centro;T;HM;0;Desconhecido;1426.44;;
+PT18;Alentejo;T;HM;0;Desconhecido;1271.88;;
+PT15;Algarve;T;HM;0;Desconhecido;1183.03;;
+PT17;Área Metropolitana de Lisboa;1;H;0;Desconhecido;1871.97;;
+PT1;Continente;1;H;0;Desconhecido;1791.32;;
+PT20;Região Autónoma dos Açores;1;H;0;Desconhecido;;x;Dado não disponível
+PT2;Região Autónoma dos Açores;1;H;0;Desconhecido;;x;Dado não disponível
+PT30;Região Autónoma da Madeira;1;H;0;Desconhecido;;x;Dado não disponível
+PT3;Região Autónoma da Madeira;1;H;0;Desconhecido;;x;Dado não disponível
+PT;Portugal;1;H;0;Desconhecido;1791.32;;
+PT11;Norte;1;H;0;Desconhecido;2055.29;;
+PT16;Centro;1;H;0;Desconhecido;1561.13;;
+PT18;Alentejo;1;H;0;Desconhecido;1241.33;;
+PT15;Algarve;1;H;0;Desconhecido;1313.19;;
+PT17;Área Metropolitana de Lisboa;2;M;0;Desconhecido;1282.49;;
+PT1;Continente;2;M;0;Desconhecido;1262.06;;
+PT20;Região Autónoma dos Açores;2;M;0;Desconhecido;;x;Dado não disponível
+PT2;Região Autónoma dos Açores;2;M;0;Desconhecido;;x;Dado não disponível
+PT30;Região Autónoma da Madeira;2;M;0;Desconhecido;;x;Dado não disponível
+PT3;Região Autónoma da Madeira;2;M;0;Desconhecido;;x;Dado não disponível
+PT;Portugal;2;M;0;Desconhecido;1262.06;;
+PT11;Norte;2;M;0;Desconhecido;1368.36;;
+PT16;Centro;2;M;0;Desconhecido;1108.63;;
+PT18;Alentejo;2;M;0;Desconhecido;1341.71;;
+PT15;Algarve;2;M;0;Desconhecido;1021.21;;
+PT17;Área Metropolitana de Lisboa;T;HM;1;Menos de 18 anos;994.02;;
+PT1;Continente;T;HM;1;Menos de 18 anos;761.64;;
+PT20;Região Autónoma dos Açores;T;HM;1;Menos de 18 anos;;x;Dado não disponível
+PT2;Região Autónoma dos Açores;T;HM;1;Menos de 18 anos;;x;Dado não disponível
+PT30;Região Autónoma da Madeira;T;HM;1;Menos de 18 anos;;x;Dado não disponível
+PT3;Região Autónoma da Madeira;T;HM;1;Menos de 18 anos;;x;Dado não disponível
+PT;Portugal;T;HM;1;Menos de 18 anos;761.64;;
+PT11;Norte;T;HM;1;Menos de 18 anos;687.87;;
+PT16;Centro;T;HM;1;Menos de 18 anos;658.79;;
+PT18;Alentejo;T;HM;1;Menos de 18 anos;641.01;;
+PT15;Algarve;T;HM;1;Menos de 18 anos;694.19;;
+PT17;Área Metropolitana de Lisboa;1;H;1;Menos de 18 anos;1080.78;;
+PT1;Continente;1;H;1;Menos de 18 anos;805.1;;
+PT20;Região Autónoma dos Açores;1;H;1;Menos de 18 anos;;x;Dado não disponível
+PT2;Região Autónoma dos Açores;1;H;1;Menos de 18 anos;;x;Dado não disponível
+PT30;Região Autónoma da Madeira;1;H;1;Menos de 18 anos;;x;Dado não disponível
+PT3;Região Autónoma da Madeira;1;H;1;Menos de 18 anos;;x;Dado não disponível
+PT;Portugal;1;H;1;Menos de 18 anos;805.1;;
+PT11;Norte;1;H;1;Menos de 18 anos;717.47;;
+PT16;Centro;1;H;1;Menos de 18 anos;663.45;;
+PT18;Alentejo;1;H;1;Menos de 18 anos;641.56;;
+PT15;Algarve;1;H;1;Menos de 18 anos;673.89;;
+PT17;Área Metropolitana de Lisboa;2;M;1;Menos de 18 anos;664.32;;
+PT1;Continente;2;M;1;Menos de 18 anos;647.81;;
+PT20;Região Autónoma dos Açores;2;M;1;Menos de 18 anos;;x;Dado não disponível
+PT2;Região Autónoma dos Açores;2;M;1;Menos de 18 anos;;x;Dado não disponível
+PT30;Região Autónoma da Madeira;2;M;1;Menos de 18 anos;;x;Dado não disponível
+PT3;Região Autónoma da Madeira;2;M;1;Menos de 18 anos;;x;Dado não disponível
+PT;Portugal;2;M;1;Menos de 18 anos;647.81;;
+PT11;Norte;2;M;1;Menos de 18 anos;618.1;;
+PT16;Centro;2;M;1;Menos de 18 anos;645.29;;
+PT18;Alentejo;2;M;1;Menos de 18 anos;638.5;;
+PT15;Algarve;2;M;1;Menos de 18 anos;728.81;;

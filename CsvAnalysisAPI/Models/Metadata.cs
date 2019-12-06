@@ -37,8 +37,9 @@ namespace CsvAnalysisAPI.Models
         {
             this.Metricas = new MD_Metricas();
             AddMetrics(file.RootCategory.columnMetrics, null);
+            int index = 1;
             foreach(Categoria cat in file.RootCategory.categoriasfilhas)
-                AddCategory(cat, 1, null);
+                AddCategory(cat, ref index, null);
         }
 
         private void AddMetrics(List<CatMetrics> metrics, int? categoryId)
@@ -52,7 +53,7 @@ namespace CsvAnalysisAPI.Models
             this.Metricas.Colunas.Add(new MD_Coluna(metric, categoryId, isTotal));
         }
 
-        private void AddCategory(Categoria category, int index, int? parentId)
+        private void AddCategory(Categoria category, ref int index, int? parentId)
         {               
             MD_Categoria cat = new MD_Categoria(category, index, parentId);
             if (category.columnMetrics != null && category.columnMetrics.Count > 0)
@@ -63,7 +64,10 @@ namespace CsvAnalysisAPI.Models
 
             this.Metricas.Categorias.Add(cat);
             foreach (Categoria child in category.categoriasfilhas)
-                AddCategory(child, ++index, cat.CategoriaId);
+            {
+                index++;
+                AddCategory(child, ref index, cat.CategoriaId);
+            }
         }
 
         private void GenerateDimensionsList(List<CSVColumn> columns)
@@ -106,7 +110,7 @@ namespace CsvAnalysisAPI.Models
 
     public class MD_Divisao
     {
-        public int DivisoesTerritoriaisId { get; set; }
+        public int? DivisoesTerritoriaisId { get; set; }
         public string Tipo { get; set; }
         public List<int> Linhas { get; set; }
 

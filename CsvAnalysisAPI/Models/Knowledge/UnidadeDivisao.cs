@@ -13,6 +13,6 @@ namespace CsvAnalysisAPI.Models.Knowledge
         public string Unidade { get; set; }
         public string Divisao { get; set; }
         public int Children { get; set; }
-
+        public string Alternativos { get; set; }
     }
 }

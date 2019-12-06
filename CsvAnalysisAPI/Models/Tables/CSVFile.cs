@@ -70,14 +70,9 @@ namespace CsvAnalysisAPI.Models
                 return;
 
             this.RowGeographic = new List<DivisaoTerritorial>[this.RowsCount];
-
-            if (domainsCol.Count == 1)
-            {
-                //existe apenas uma coluna com Divisões Territoriais. Não é necessário efetuar cruzamentos
-                return;
-            }
-
             List<DivisaoTerritorial>[] auxRows = new List<DivisaoTerritorial>[this.RowsCount];
+                       
+
             int listIndex = -1;
             int colsLength = domainsCol.Count;
             foreach (CSVColumn col in domainsCol)
@@ -133,8 +128,8 @@ namespace CsvAnalysisAPI.Models
                 }
             }
 
-            this.RowGeographic = new List<DivisaoTerritorial>[this.RowsCount + 1];
-            for (int i = 1; i < auxRows.Length; i++)
+            this.RowGeographic = new List<DivisaoTerritorial>[this.RowsCount];
+            for (int i = 0; i < auxRows.Length; i++)
             {
                 if (auxRows[i] == null)
                     continue;
@@ -177,15 +172,16 @@ namespace CsvAnalysisAPI.Models
         /// <returns></returns>
         private Categoria GenerateCategoriesTree(List<ColumnNode> tree)
         {
-            Categoria root = new Categoria { nome = "root", categoriasfilhas = new List<Categoria>(), metricas = new List<string>(), columnMetrics = new List<CatMetrics>() };
+            int nextId = 1;
+            Categoria root = new Categoria {ParentId = null, CatId = nextId++, nome = "root", categoriasfilhas = new List<Categoria>(), metricas = new List<string>(), columnMetrics = new List<CatMetrics>() };
 
             foreach (ColumnNode node in tree)
-                AddNodeToCategory(node, root);
+                AddNodeToCategory(node, root, ref nextId);
 
             return root;
         }
 
-        private void AddNodeToCategory(ColumnNode node, Categoria parent)
+        private void AddNodeToCategory(ColumnNode node, Categoria parent, ref int nextIndex)
         {
             if (node.hasValue && node.nodes.Count == 0)
             {
@@ -194,7 +190,7 @@ namespace CsvAnalysisAPI.Models
                 return;
             }
 
-            Categoria categoria = new Categoria { nome = node.title, categoriasfilhas = new List<Categoria>(), metricas = new List<string>(), columnMetrics = new List<CatMetrics>() };
+            Categoria categoria = new Categoria {ParentId = parent.CatId, CatId = nextIndex++, nome = node.title, categoriasfilhas = new List<Categoria>(), metricas = new List<string>(), columnMetrics = new List<CatMetrics>() };
             parent.categoriasfilhas.Add(categoria);
             if (node.hasValue)
             {
@@ -202,7 +198,7 @@ namespace CsvAnalysisAPI.Models
                 categoria.CatValueId = node.id;
             }
             foreach (ColumnNode childNode in node.nodes)
-                AddNodeToCategory(childNode, categoria);
+                AddNodeToCategory(childNode, categoria, ref nextIndex);
             
         }
 

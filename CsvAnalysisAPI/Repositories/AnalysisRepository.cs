@@ -45,7 +45,7 @@ namespace CsvAnalysisAPI.Repositories
                 Metadata metadata = new Metadata(file, filename);
                 socket.SendMetadata(metadata);
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 file = null;
             }
@@ -63,7 +63,7 @@ namespace CsvAnalysisAPI.Repositories
             string filePath = basePath + "\\App_Data\\files\\" + filename;
             using (GenericParserAdapter parser = new GenericParserAdapter())
             {
-                parser.SetDataSource(filePath, System.Text.Encoding.UTF8);
+                parser.SetDataSource(filePath);
                 parser.ColumnDelimiter = ';';
                 parser.FirstRowHasHeader = true;
                 data = parser.GetDataTable();

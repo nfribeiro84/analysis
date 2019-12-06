@@ -13,6 +13,8 @@ namespace CsvAnalysisAPI.Models
         public List<CatMetrics> columnMetrics { get; set; }
         public string CatValue { get; set; }
         public int CatValueId { get; set; }
+        public int CatId { get; set; }
+        public int? ParentId { get; set; }
     }
 
     public class CatMetrics

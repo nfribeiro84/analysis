@@ -26,7 +26,8 @@ namespace CsvAnalysisAPI.Repositories
         {
             PetaPoco.Sql query = PetaPoco.Sql.Builder;
             query.Append(@" select udh.UnidadesDivisoesHierarquiasId, nu.Nome 'Unidade', nd.Nome 'Divisao', udh.UnidadesDivisoesId, udh.HierarquiasTerritoriaisId,
-	                        (select COUNT(*) from Unidades_Divisoes_Hierarquias udh2 where udh2.HierarquiasTerritoriaisId = udh.HierarquiasTerritoriaisId and ParentId = udh.UnidadesDivisoesId) 'Children'
+	                        (select COUNT(*) from Unidades_Divisoes_Hierarquias udh2 where udh2.HierarquiasTerritoriaisId = udh.HierarquiasTerritoriaisId and ParentId = udh.UnidadesDivisoesId) 'Children',
+                            ( select na.Nome from Nomes na inner join UT_NomesAlternativos utna on na.NomesId = utna.NomesId where utna.UnidadesTerritoriaisId = ut.UnidadesTerritoriaisId for JSON Path ) 'Alternativos'
                             from 
 	                            Unidades_Divisoes_Hierarquias udh
 	                            inner join Unidades_Divisoes ud on udh.UnidadesDivisoesId = ud.UnidadesDivisoesId
