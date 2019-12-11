@@ -1,5 +1,4 @@
 {
-  "TimeOfAnalisys": 2,
   "Nome": "demo_mlexpecedu.csv",
   "NumLinhas": 19608,
   "NumColunas": 15,
@@ -16715,34 +16714,5 @@
         "E_Total": false
       }
     ]
-  },
-  "resume": {
-    "dimensions": [
-      "unit",
-      "sex",
-      "age",
-      "isced11",
-      "geo\\time"
-    ],
-    "metrics": [
-      "2016 ",
-      "2015 ",
-      "2014 ",
-      "2013 ",
-      "2012 ",
-      "2011 ",
-      "2010 ",
-      "2009 ",
-      "2008 ",
-      "2007 "
-    ],
-    "divisions": [
-      "NUTS 0"
-    ],
-    "geo": [
-      "geo\\time"
-    ],
-    "numDimensions": 5,
-    "numMetrics": 10
   }
 }

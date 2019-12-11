@@ -1,5 +1,4 @@
 {
-  "TimeOfAnalisys": 1,
   "Nome": "edat_lfse_22.csv",
   "NumLinhas": 2988,
   "NumColunas": 25,
@@ -2342,46 +2341,5 @@
         "E_Total": false
       }
     ]
-  },
-  "resume": {
-    "dimensions": [
-      "sex",
-      "age",
-      "training",
-      "wstatus",
-      "unit",
-      "geo\\time"
-    ],
-    "metrics": [
-      "2018 ",
-      "2017 ",
-      "2016 ",
-      "2015",
-      "2014",
-      "2013",
-      "2012",
-      "2011",
-      "2010",
-      "2009",
-      "2008",
-      "2007",
-      "2006",
-      "2005",
-      "2004",
-      "2003",
-      "2002",
-      "2001",
-      "2000"
-    ],
-    "divisions": [
-      "NUTS 0",
-      "NUTS 1",
-      "NUTS 2"
-    ],
-    "geo": [
-      "geo\\time"
-    ],
-    "numDimensions": 6,
-    "numMetrics": 19
   }
 }

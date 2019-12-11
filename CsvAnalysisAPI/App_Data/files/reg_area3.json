@@ -1,5 +1,4 @@
 {
-  "TimeOfAnalisys": 2,
   "Nome": "reg_area3.csv",
   "NumLinhas": 4384,
   "NumColunas": 5,
@@ -3245,27 +3244,5 @@
         "E_Total": false
       }
     ]
-  },
-  "resume": {
-    "dimensions": [
-      "landuse",
-      "unit",
-      "geo\\time"
-    ],
-    "metrics": [
-      "2016 ",
-      "2013 "
-    ],
-    "divisions": [
-      "NUTS 0",
-      "NUTS 1",
-      "NUTS 2",
-      "NUTS 3"
-    ],
-    "geo": [
-      "geo\\time"
-    ],
-    "numDimensions": 3,
-    "numMetrics": 2
   }
 }

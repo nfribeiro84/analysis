@@ -1,5 +1,4 @@
 {
-  "TimeOfAnalisys": 10,
   "Nome": "ganhomediomensal.csv",
   "NumLinhas": 297,
   "NumColunas": 9,
@@ -515,31 +514,5 @@
         "E_Total": false
       }
     ]
-  },
-  "resume": {
-    "dimensions": [
-      "2017/geocod",
-      "2017/geodsg",
-      "2017/dim_3",
-      "2017/dim_3_t",
-      "2017/dim_4",
-      "2017/dim_4_t",
-      "2017/sinal_conv",
-      "2017/sinal_conv_desc"
-    ],
-    "metrics": [
-      "2017/valor"
-    ],
-    "divisions": [
-      "NUTS 2",
-      "NUTS 1",
-      "NUTS 0"
-    ],
-    "geo": [
-      "2017/geocod",
-      "2017/geodsg"
-    ],
-    "numDimensions": 8,
-    "numMetrics": 1
   }
 }

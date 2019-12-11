@@ -1,5 +1,4 @@
 {
-  "TimeOfAnalisys": 3,
   "Nome": "numalojamentos.csv",
   "NumLinhas": 4735,
   "NumColunas": 13,
@@ -4964,40 +4963,5 @@
         "E_Total": false
       }
     ]
-  },
-  "resume": {
-    "dimensions": [
-      "ANO",
-      "GEO_COD",
-      "GEO_COD_DSG",
-      "NIVEL",
-      "NIVEL_DSG"
-    ],
-    "metrics": [
-      "N_CLASSICOS_RES_HABITUAL",
-      "N_ALOJAMENTOS_COLECTIVOS",
-      "N_ALOJAMENTOS_RES_HABITUAL",
-      "N_ALOJAMENTOS_VAGOS",
-      "N_ALOJAMENTOS",
-      "N_ALOJAMENTOS_FAMILIARES",
-      "N_ALOJAMENTOS_FAM_CLASSICOS",
-      "N_ALOJAMENTOS_FAM_N_CLASSICOS"
-    ],
-    "divisions": [
-      "NUTS 0",
-      "NUTS 1",
-      "NUTS 2",
-      "NUTS 3",
-      "Municípios",
-      "Freguesias",
-      "Secção Estatística",
-      "Subsecção Estatística"
-    ],
-    "geo": [
-      "GEO_COD_DSG",
-      "NIVEL_DSG"
-    ],
-    "numDimensions": 5,
-    "numMetrics": 8
   }
 }

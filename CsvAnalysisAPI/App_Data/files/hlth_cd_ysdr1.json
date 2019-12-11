@@ -1,5 +1,4 @@
 {
-  "TimeOfAnalisys": 71,
   "Nome": "hlth_cd_ysdr1.csv",
   "NumLinhas": 226470,
   "NumColunas": 18,
@@ -211340,39 +211339,5 @@
         "E_Total": false
       }
     ]
-  },
-  "resume": {
-    "dimensions": [
-      "sex",
-      "age",
-      "unit",
-      "icd10",
-      "geo\\time"
-    ],
-    "metrics": [
-      "2010",
-      "2009",
-      "2008",
-      "2007",
-      "2006",
-      "2005",
-      "2004",
-      "2003",
-      "2002",
-      "2001",
-      "2000",
-      "1999",
-      "1996"
-    ],
-    "divisions": [
-      "NUTS 0",
-      "NUTS 2",
-      "NUTS 1"
-    ],
-    "geo": [
-      "geo\\time"
-    ],
-    "numDimensions": 5,
-    "numMetrics": 13
   }
 }
